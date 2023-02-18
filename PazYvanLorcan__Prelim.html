@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Paz, Yvan Lorcan / Preliminary Examination </title>
+        <style>
+
+            /*========== Font style for the body ==========*/
+            body {font-family: Arial, Helvetica, sans-serif;}
+
+            /*========== Table Border for the body ==========*/
+            table, th, td {
+                padding: 8px;
+                text-align: center;
+                border: 1px groove black;
+                background-color: white;
+                padding: 15px 30px;
+            }
+
+            /*========== the box ==========*/
+            .container {
+                padding: 15px;
+            }
+
+            /*========== The Buttons ==========*/
+            button {
+                background-color: orange;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            button:hover {
+                opacity: 0.5;
+            }
+
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: red;
+            }
+
+            /*========== Screen Animation and Places ==========*/
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+                padding-top: 60px;
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto;
+                border: 1px solid #888;
+                width: 50%;
+            }
+
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+            .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+            }
+
+            @keyframes animatezoom {
+                from {transform: scale(0)} 
+                to {transform: scale(1)}
+            }
+
+        </style>
+    </head>
+
+    <!--========== The Body ==========-->
+    <body>
+    
+        <!--========== Discription ==========-->
+        <dl>
+            <dt>Preliminary Examination by Yvan Lorcan Paz</dt>
+            <dd>- Make HTML Web</dd>
+            <dd>- Title Should Have your <b>NAME</b> and <b>PRELIM</b></dd>
+            <dd>- Add Description</dd>
+            <dd>- Make a table and it must contains a header <b>NAME</b>, <b>AGE</b>, <b>ADDRESS</b> and <b>CONTACT NUMBER</b></dd>
+            <dd>- The table's body should contain <b>4</b> datas</dd>
+            <dd>- The body of data should have <b>different colors</b></dd>
+            <dd>- Creat a <b>Form</b> that contains <b>NAME</b>, <b>AGE</b>, <b>ADDRESS</b> <b>CONTACT NUMBER</b> and <b>GENDER</b></dd>
+            <dd>- The footer should contain your <b>NAME</b>, <b>PRELIM</b> and <b>Ma'am Lucy's Age</b></dd>
+            <dd>- Put it in github</dd>
+            <dd>- Repo should contain your <b>NAME</b> and <b>PRELIM</b></dd>
+            <dd>- Commit's name is <b>My Exam</b></dd>
+        </dl>
+
+        <!--========== Selection ==========-->
+        <div class="contain">
+            <button onclick="document.getElementById('Table').style.display='block'" style="width:auto;">Tables</button>
+            
+            <button onclick="document.getElementById('Form').style.display='block'" style="width:auto;">Form</button>
+        </div>
+
+        <!--========== Table ==========-->
+        <div id="Table" class="modal">
+            
+            <table class="modal-content animate" action="/action_page.php" method="post">
+                <span onclick="document.getElementById('Table').style.display='none'" class="close" title="Close Table">&times;</span>
+
+                <!--========== Table Names ==========-->
+                <thead>
+                    <tr>
+                        <th> Name </th>
+                        <th> Age </th>
+                        <th> Address </th>
+                        <th> Contact Number </th>
+                    </tr>
+                </thead>
+    
+                <!--========== Table Contents ==========-->
+                <tbody>
+                    
+                    <!--========== Content 1 ==========-->
+                    <tr>
+                        <tr style="background-color: red">
+                        <td>Juan Dela Cruz</td>
+                        <td>23</td>
+                        <td>Sta. Rita Pampanga</td>
+                        <td>09096549453</td>
+                    </tr>
+    
+                    <!--========== Content 2 ==========-->
+                    <tr>
+                        <tr style="background-color: blue">
+                        <td>Anthony Emanuel</td>
+                        <td>19</td>
+                        <td>Masinloc Zambales</td>
+                        <td>09536567435</td>
+                    </tr>
+    
+                    <!--========== Content 3 ==========-->
+                    <tr>
+                        <tr style="background-color: green">
+                        <td>Carlo Ehanda</td>
+                        <td>20</td>
+                        <td>Subic Olongapo</td>
+                        <td>09653217564</td>
+                    </tr>
+    
+                    <!--========== Content 4 ==========-->
+                    <tr>
+                        <tr style="background-color: pink">
+                        <td>Kyla Mae Cabacungan</td>
+                        <td>21</td>
+                        <td>Iba Zambales</td>
+                        <td>09641864848</td>
+                    </tr>
+    
+                </tbody>
+            </table>
+        </div>
+        
+        <!--========== Form ==========-->
+        <div id="Form" class="modal">
+            
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                
+                <div class="container">
+                    <label for="Name"><b>NAME</b></label>
+                    <input type="text" placeholder="Enter NAME" name="NAME" required><br>
+            
+                    <label for="AGE"><b>AGE</b></label>
+                    <input type="AGE" placeholder="Enter AGE" name="AGE" required><br>
+
+                    <label for="ADDRESS"><b>ADDRESS</b></label>
+                    <input type="ADDRESS" placeholder="Enter ADDRESS" name="ADDRESS" required><br>
+
+                    <label for="CONTACT NUMBER"><b>CONTACT NUMBER</b></label>
+                    <input type="CONTACT NUMBER" placeholder="Enter CONTACT NUMBER" name="CONTACT NUMBER" required><br>
+
+                    <label for="Gender">Select Gender:</label>
+
+                    <select name="Gender" id="Gender">
+                        <option value="MALE">MALE</option>
+                        <option value="FEMALE">FEMALE</option>
+                    </select><br>
+                
+                    <button type="submit">submit</button>
+                </div>
+            
+                <div class="container" style="background-color:white">
+                  <button type="button" onclick="document.getElementById('Form').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </body>
+    <footer>
+        <p>Paz, Yvan Lorcan / Preliminary Examination / </p>
+
+    </footer>
+</html>
